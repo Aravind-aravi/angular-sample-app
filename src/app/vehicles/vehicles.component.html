@@ -1,0 +1,15 @@
+
+
+<div [ngStyle]="{'padding':'10px', 'margin-top':'10px', 'font-family':'Verdana'}"
+[ngClass]="{'available':element.rented == false , 'notAvailable':element.rented == true}"
+*ngFor="let element of vehicles; let i = index">
+
+  <h3>{{element.model}}</h3>
+  <p>{{element.color}} {{element.type}} with {{element.seats}} seats</p>
+  <p>$ {{element.costPerKm}}/Km</p>
+  <div>
+  <button *ngIf="element.rented" (click)="onClick(i)" >Cancel Booking</button> <!-- for rented vehicle -->
+  <button *ngIf="!element.rented" (click)="onClick(i)">Book Now</button> <!-- for non rented vehicle -->
+</div>
+</div>
+

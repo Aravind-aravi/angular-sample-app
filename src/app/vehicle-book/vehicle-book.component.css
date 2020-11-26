@@ -1,0 +1,9 @@
+.available {
+  color: white;
+  background-color: green;
+}
+.notAvailable {
+  color: yellow;
+  background-color: #c66;
+}
+

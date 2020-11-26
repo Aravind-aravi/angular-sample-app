@@ -1,0 +1,2 @@
+<app-vehicle-book *ngFor="let vehicle of vehicles ; let i = index" [vehicle]="vehicle" [admin]="admin"
+(vehiclesData)="handleBooking($event)" (vehicleId)="removeVehicle(vehicle.id)"></app-vehicle-book>

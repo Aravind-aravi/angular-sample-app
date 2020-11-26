@@ -1,0 +1,19 @@
+<div>
+  <p>Model:<select (change)="onSelectModel($event)">
+    <option [selected]="isModel('select')">select</option>
+    <option [selected]="isModel('BMW X3')">BMW X3</option>
+    <option [selected]="isModel('Audi A2')">Audi A2</option></select>
+  </p>
+  <p>Type: <input type="radio" name="type" [checked]="isType('SUV')"(change)="onChangeType($event)">SUV
+    <input type="radio" name="type" value="car" [checked]="isType('car')"(change)="onChangeType($event)">Car
+  </p>
+  <p> color:<input type="color"(change)="onChangeColor($event)" [value]="info.color"></p>
+  <p>seats:<input type="text"(change)="onChangeSeats($event)"[value]="info.seats"></p>
+  <button (click)="onClick()" >Submit</button>
+</div><br>
+<div>
+  Model:{{info.model}} <br>
+  Type:{{info.type}} <br>
+  color:{{info.color}} <br>
+  Seats:{{info.seats}} <br>
+</div>
